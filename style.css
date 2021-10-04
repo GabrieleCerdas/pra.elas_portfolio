@@ -89,6 +89,22 @@ a{
     }
 }
 
+#animation{
+    transition: 300ms;
+}
+
+/* é necessário criar uma classe para integrar com JS, possibilitando a animação de rotação ao clicar na seta */
+.rotate{
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+
+/* criar nova classe para possibilitar que o texto "about" apareça quando clicar na seta, mesmo procedimento do anterior */
+/* !important é usado pois no inline temos display: none, e ele tem prioridade */
+.active {
+    display: block !important;
+}
+
 #about p{
     max-width: 700px;
     margin: 0 auto;

@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box faz com que o cada conteudo/div se contente com a sua box, sem ser somado com o padding e margin  */
+    box-sizing: border-box;
+    color: #a09038;
+    /* caso o navegador nã consiga carregar a nossa fonte roboto, ele carrega uma fonte sem serifa mais simples */
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    /* background-image: url(./pexels-cátia-matos-1072179\ \(1\).jpg );
+    background-repeat: no-repeat;
+    background-position: center center fixed; */
+    background: url(./pexels-cátia-matos-1072179\ \(1\).jpg) no-repeat center center fixed;
+    /* background-size: cover deixa o fundo ocupando toda a tela, se adaptando ao tamanho dela */
+    background-size: cover;
+
+}
+
+ul{
+    list-style: none;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    text-align: center;
+}
+
+.container .name h1{
+    font-size: 60px;
+    font-style: italic;
+    font-weight: 900;
+}
+
+.container .name h5{
+    font-size: 20px;
+}

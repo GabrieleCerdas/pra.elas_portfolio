@@ -12,7 +12,10 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
+    /* background-color: #4d4845; */
+    box-shadow: 1px 1px 10px 1px #a09038;
+
 }
 
 header ul{
@@ -21,7 +24,21 @@ header ul{
 }
 
 header ul li{
-    padding: 10px;
+    padding: 5px;
+    border-right: 2px dashed #4d4845;
+}
+
+header ul li:first-child {
+    border-left: 2px dashed #4d4845;
+}
+
+header ul li a{
+    transition: 300ms;
+}
+
+header ul li a:hover{
+    color: #c0a717;
+    text-decoration: underline;
 }
 
 body{
@@ -59,6 +76,19 @@ a{
     font-size: 20px;
 }
 
+#arrow{
+    font-size: 35px;
+    cursor: pointer;
+    animation: blink 1s steps(5, start) infinite;
+}
+
+/* keyframes vai chamar a nossa animação, é preciso mostrar o que queremos que ele faça : ele vai piscar então ele fica visivel e invisível no intervalo de 1s */
+@keyframes blink{
+    to {
+        visibility: hidden;
+    }
+}
+
 #about p{
     max-width: 700px;
     margin: 0 auto;
@@ -73,8 +103,37 @@ a{
 /* input (seu melhor email) vai ter largura de 50% do form */
 .form input{
     width: 50%;
+    padding: 5px 10px;
+    /* border radius vai deixar os alguns cantos do campo redondinhos */
+    border: none;
+    border-radius: 5px 0px 0px 5px;
 }
 
 .form button{
     width: 15%;
+    padding: 5px 10px;
+    /* background-color: #a09038; */
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    /* a margem negativa vai fazer com que o botao enviar e o campo de email fiquem grudados um no outro */
+    margin-left: -5px;
+    margin-top: 20px;
+    cursor: pointer;
+
+    /* o fundo irá mudar entre essas cores */
+    /* background vai expandir e ocupar todo espaço */
+    /* a animação acontece da esquerda para a direita */
+    background: linear-gradient(to right, #a09038 50%, #4d4845 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 300ms ease-out;
+}
+
+.form button:hover{
+    /* background-color: #4d4845;*/
+    /* a cor do botão é cinza, quando passamos o mouse ele sai, da esquerda para a direita e fica ocre. Quando tiramos o mouse, ele volta a ser cinza, com a cor ocre voltando para a esquerda */
+    background-position: left bottom;
 }
